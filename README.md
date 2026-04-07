@@ -194,16 +194,18 @@ Customizable safety prompts for `self_check_input` and `self_check_output`. Edit
 
 ---
 
-## Dependencies
+## Python packages and runtime components
 
-| Package | Purpose |
+Install the Python dependencies listed in `requirement.txt` for the default setup. The table below is a reference for the main libraries and local runtime components used by this project; some entries are optional or may need to be installed/configured separately from the Python requirements.
+
+| Package / Component | Purpose |
 |---|---|
 | `nemoguardrails` | Guardrails framework and Colang runtime |
 | `langchain-community` | LLM wrappers, ChromaDB integration |
 | `langchain-ollama` | Ollama embeddings for LangChain |
-| `langchain-openai` | OpenAI-compatible wrapper (used for Ollama) |
+| `langchain-openai` | OpenAI-compatible wrapper used by the normal agent configuration |
 | `chromadb` | Local vector database |
-| `ollama` | Ollama Python client |
+| `ollama` | Local Ollama runtime and/or Python client, depending on how you run the project |
 | `pypdf` | PDF text extraction |
 | `presidio-analyzer` | PII detection |
 | `presidio-anonymizer` | PII redaction |
