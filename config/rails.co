@@ -1,0 +1,8 @@
+define flow scrub pii
+  execute scrub_pii
+
+define flow check policy violation
+  $is_safe = execute check_policy_violation
+  if not $is_safe
+    bot refuse to respond due to policy
+    stop

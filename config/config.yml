@@ -1,0 +1,24 @@
+models:
+  - type: main
+    engine: openai
+    model: mistral:7b
+    parameters:
+      base_url: "http://127.0.0.1:11434/v1"
+      api_key: "ollama"
+  
+  - type: self_check
+    engine: openai
+    model: llama3.2:3b 
+    parameters:
+      base_url: "http://127.0.0.1:11434/v1"
+      api_key: "ollama"
+
+rails:
+  input:
+    flows:
+      - scrub pii
+      - self check input
+  output:
+    flows:
+      - self check output
+      - check policy violation
